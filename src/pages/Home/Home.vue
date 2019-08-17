@@ -1,20 +1,21 @@
 <template>
   <div>
-    <div class="text">This is Home</div>
-    <router-link to="/list">列表</router-link>
+    <home-header></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from './components/Header'
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 
 }
 </script>
 
 <style scoped>
-  .text {
-    font-size: 20px;
-  }
+
 </style>
