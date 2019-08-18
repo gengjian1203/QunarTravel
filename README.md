@@ -1,6 +1,18 @@
-# travel
+# QunarTravel
 
-> A Vue.js project
+This is a project that uses Vue framework to imitate the core page of Qunar App.  
+这是一个使用Vue框架模拟去哪儿网App核心页面的项目。  
+
+## Show
+You can [click](https://gengjian1203.github.io/QunarTravel/dist/index.html) on this location to view the project online.  
+The following is a preview of the project:  
+![Result](readme/result.png "show")
+
+## Including skills
+* vue-router  
+* components  
+* fastclick  
+* iconfont  
 
 ## Build Setup
 
