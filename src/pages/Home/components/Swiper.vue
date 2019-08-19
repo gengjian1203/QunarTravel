@@ -51,8 +51,8 @@ export default {
   .wrapper >>> .swiper-pagination-bullet-active
     background: #ffffff;
 
-  .wrapper >>> .swiper-pagination
-    margin-bottom: -.2rem;
+  .wrapper >>> .swiper-pagination-bullets
+    bottom: .1rem
 
   .wrapper
     overflow: hidden;

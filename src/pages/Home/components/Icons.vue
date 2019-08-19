@@ -90,7 +90,7 @@ export default {
   @import "~style/mixins.styl"
 
   .wrap >>> .swiper-pagination-bullets
-    bottom: -.06rem
+    bottom: .1rem
 
   .wrap >>> .swiper-pagination-bullet
     width: 6px;
@@ -128,7 +128,6 @@ export default {
         bottom: 0
         line-height: .4rem
         height: .53rem
-        font-size: .28rem
         text-align: center
         color: $DescColor
         ellipsis()

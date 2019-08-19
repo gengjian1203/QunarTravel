@@ -27,7 +27,6 @@ export default {
     display: flex;
     height: .88rem;
     line-height: .88rem;
-    font-size: .28rem;
     color: #ffffff;
     background: $BGColor;
     .home-left
