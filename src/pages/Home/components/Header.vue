@@ -4,7 +4,7 @@
       <div class="iconfont icon-back">&#xe696;</div>
     </div>
     <div class="home-input">
-      <span class="iconfont">&#xe622;</span>
+      <span class="iconfont icon-input">&#xe622;</span>
       输入城市/景点/游玩主题</div>
     <div class="home-right">
       城市
@@ -25,11 +25,11 @@ export default {
   @import '~style/varibles.styl'
   .home
     display: flex;
-    height: .8rem;
-    line-height: .8rem;
-    font-size: .3rem;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .28rem;
     color: #ffffff;
-    background: $BGcolor;
+    background: $BGColor;
     .home-left
       float: left;
       margin: 0px .1rem;
@@ -37,18 +37,22 @@ export default {
         font-size: .5rem;
     .home-input
       flex: 1;
-      height: .5rem;
-      line-height: .5rem;
+      height: .6rem;
+      line-height: .59rem;
       margin: auto .1rem;
-      padding: 0px .1rem;
-      color: #cccccc;
+      padding: 0px .15rem;
+      color: #dddddd;
       background: #ffffff;
-      border-radius: 0.1rem;
+      border-radius: 0.08rem;
+      .icon-input
+        margin: 0 .03rem;
     .home-right
       float: right;
-      margin: 0px .2rem;
+      margin-left: .1rem;
+      margin-right: .28rem
       .icon-arrow
         margin-left: -.04rem;
+        margin-top: -2rem;
         font-size: .24rem;
 
 </style>

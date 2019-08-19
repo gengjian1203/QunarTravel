@@ -13,6 +13,7 @@ The following is a preview of the project:
 * components  
 * fastclick  
 * iconfont  
+* stylus  
 
 ## Build Setup
 
