@@ -33,7 +33,10 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/static/mock/home.json').then(this.getHomeInfoSucc)
+      // 本地数据
+      // axios.get('/api/home.json').then(this.getHomeInfoSucc)
+      // 远程github数据
+      axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/home.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       if (res.data.ret && res.data.data) {
