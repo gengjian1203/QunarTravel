@@ -6,10 +6,12 @@
     <div class="home-input">
       <span class="iconfont icon-input">&#xe622;</span>
       输入城市/景点/游玩主题</div>
-    <div class="home-right">
-      {{city}}
-      <span class="iconfont icon-arrow">&#xe636;</span>
-    </div>
+    <router-link to="/city">
+      <div class="home-right">
+        {{city}}
+        <span class="iconfont icon-arrow">&#xe636;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -28,8 +30,8 @@ export default {
   @import '~style/varibles.styl'
   .home
     display: flex;
-    height: .88rem;
-    line-height: .88rem;
+    height: $headerHeight;
+    line-height: $headerHeight;
     color: #ffffff;
     background: $BGColor;
     .home-left
@@ -52,6 +54,7 @@ export default {
       float: right;
       margin-left: .1rem;
       margin-right: .28rem
+      color: #ffffff
       .icon-arrow
         margin-left: -.04rem;
         margin-top: -2rem;
