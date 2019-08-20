@@ -123,7 +123,7 @@ export default {
         width: 28.5%
         height: 0
         padding-right: .1rem
-        padding-bottom: 3rem
+        padding-bottom: 40.5%
         .item-img
           overflow: hidden
           width: 100%

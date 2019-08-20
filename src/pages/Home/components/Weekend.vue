@@ -64,13 +64,12 @@ export default {
       width: 100%
       .item
         width: 100%
-        height: 0
-        padding-bottom: 50%
+        height: 50%
         margin-bottom: .2rem
         background: #ffffff
         .item-img
           width: 100%
-          height: 2.5rem
+          height: 33.3%
         .name
           margin-top: .3rem
           margin-left: .2rem
