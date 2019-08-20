@@ -34,9 +34,13 @@ export default {
   methods: {
     getHomeInfo () {
       // 本地数据
-      // axios.get('/api/home.json').then(this.getHomeInfoSucc)
-      // 远程github数据
-      axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/home.json').then(this.getHomeInfoSucc)
+      axios.get('/api/home.json').then(this.getHomeInfoSucc).catch(() => {
+        console.log('本地home.json数据未找到，索引github远程数据')
+        // 远程github数据
+        axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/home.json').then(this.getHomeInfoSucc).catch(() => {
+          console.log('github远程home.json数据未找到')
+        })
+      })
     },
     getHomeInfoSucc (res) {
       if (res.data.ret && res.data.data) {
