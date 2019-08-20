@@ -6,21 +6,21 @@
       猜你喜欢
     </div>
     <ul class="content">
-      <li class="item border-bottom" v-for="item of ListIntroduction" :key="item.id">
-        <img class="item-img" :src="item.url" :alt="item.strName">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img class="item-img" :src="item.imgUrl" :alt="item.desc">
         <div class="introduction">
-          <div class="introduction-name">{{item.strName}}</div>
+          <div class="introduction-name">{{item.desc}}</div>
           <div class="introduction-comment">
-            <div class="introduction-comment-star">{{strStar(item.nStar)}}</div>
-            <div class="introduction-comment-num">{{item.nComment}}条评论</div>
+            <div class="introduction-comment-star">{{strStar(item.star)}}</div>
+            <div class="introduction-comment-num">{{item.comment}}条评论</div>
           </div>
           <div class="introduction-price">
             <div class="introduction-price-sign">￥</div>
-            <div class="introduction-price-num">{{item.nPrice}}</div>
+            <div class="introduction-price-num">{{item.price}}</div>
             起
           </div>
-          <div class="introduction-address">{{item.strAddress}}</div>
-          <div class="introduction-footnote" v-if="bFootnote(item.strFootnote)">{{item.strFootnote}}</div>
+          <div class="introduction-address">{{item.address}}</div>
+          <div class="introduction-footnote" v-if="bFootnote(item.footnote)">{{item.footnote}}</div>
         </div>
       </li>
     </ul>
@@ -34,70 +34,15 @@
 
 export default {
   name: 'HomeLike',
-  data () {
-    return {
-      ListIntroduction: [{
-        id: 10000,
-        url: 'http://img1.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-        strName: '北京欢乐谷',
-        nStar: 5,
-        nComment: 74459,
-        nPrice: 195,
-        strAddress: '朝阳区',
-        strFootnote: '亚洲唯一飞行式过山车等你来挑战，亚洲唯一飞行式过山车等你来挑战'
-      }, {
-        id: 10001,
-        url: 'http://img1.qunarzz.com/sight/p0/1804/1a/1a48cc20b0d6ed44a3.img.jpg_200x200_32e22bed.jpg',
-        strName: '奥林匹克塔',
-        nStar: 4,
-        nComment: 398,
-        nPrice: 121.9,
-        strAddress: '朝阳区',
-        strFootnote: ''
-      }, {
-        id: 10002,
-        url: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-        strName: '故宫',
-        nStar: 3,
-        nComment: 451040,
-        nPrice: 60,
-        strAddress: '东城区',
-        strFootnote: '世界五大宫之首，穿越与您近在咫尺'
-      }, {
-        id: 10003,
-        url: 'http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_200x200_2458ffb2.jpg',
-        strName: '八达岭长城',
-        nStar: 2,
-        nComment: 63351,
-        nPrice: 40,
-        strAddress: '延庆县',
-        strFootnote: '不到长城非好汉'
-      }, {
-        id: 10004,
-        url: 'http://img1.qunarzz.com/sight/p0/1501/40/40b2b6c951b28fdd.water.jpg_200x200_fdc48968.jpg',
-        strName: '水立方',
-        nStar: 1,
-        nComment: 10838,
-        nPrice: 246,
-        strAddress: '奥林匹克公园',
-        strFootnote: '重温北京奥运会的辉煌时刻!'
-      }, {
-        id: 10005,
-        url: 'http://img1.qunarzz.com/sight/p0/1604/78/78873494f26e554090.water.jpg_200x200_331422ad.jpg',
-        strName: '京东石林峡',
-        nStar: 5,
-        nComment: 2845,
-        nPrice: 58,
-        strAddress: '平谷区',
-        strFootnote: ''
-      }]
-    }
+  props: {
+    list: Array
   },
   computed: {
     strStar () {
       return function (rate) {
         const star = '★★★★★☆☆☆☆☆'
-        return star.slice(5 - rate, 10 - rate)
+        const nRate = parseInt(rate)
+        return star.slice(5 - nRate, 10 - nRate)
       }
     },
     bFootnote () {

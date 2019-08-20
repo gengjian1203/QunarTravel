@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="bShowList">
       <!-- slides -->
-      <swiper-slide  v-for="item of swiperList" :key="item.id">
-        <img class="swiper-img" :src="item.url" alt="Banner" />
+      <swiper-slide v-for="item of list" :key="item.id">
+        <img class="swiper-img" :src="item.imgUrl" alt="去哪儿门票" />
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
@@ -15,18 +15,11 @@
 
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      swiperList: [{
-        id: 100000,
-        url: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20198/01c95889ea184ed8122d1bb3abe8b3de.jpg_750x200_d814b24f.jpg'
-      }, {
-        id: 100001,
-        url: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg'
-      }, {
-        id: 100002,
-        url: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg'
-      }],
       swiperOption: {
         pagination: '.swiper-pagination',
         // 循环滚动
@@ -36,6 +29,11 @@ export default {
         // 点击Banner后仍能自动轮播
         autoplayDisableOnInteraction: false
       }
+    }
+  },
+  computed: {
+    bShowList () {
+      return this.list.length
     }
   }
 }
