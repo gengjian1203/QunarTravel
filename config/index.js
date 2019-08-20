@@ -58,14 +58,6 @@ module.exports = {
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '',
-    proxyTable: {
-        '/api': {
-            target: 'https://gengjian1203.github.io',
-            pathRewrite: {
-                '^/api': 'static/mock'
-            }
-        }
-    },
 
     /**
      * Source Maps

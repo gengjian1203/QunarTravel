@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/home.json').then(this.getHomeInfoSucc)
+      axios.get('/static/mock/home.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       if (res.data.ret && res.data.data) {
