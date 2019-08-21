@@ -14,6 +14,7 @@ The following is a preview of the project:
 * fastclick  
 * iconfont  
 * stylus  
+* axios
 * better-scroll
 
 ## Build Setup
