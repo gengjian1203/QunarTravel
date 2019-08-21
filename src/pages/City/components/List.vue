@@ -60,7 +60,7 @@ export default {
   },
   watch: {
     letter () {
-      this.scroll.scrollToElement(this.$refs[this.letter][0])
+      this.scroll.scrollToElement(this.$refs[this.letter][0], {click: true})
     }
   },
   methods: {
