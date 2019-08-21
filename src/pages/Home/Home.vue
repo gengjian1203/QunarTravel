@@ -6,18 +6,20 @@
     <home-recommend :list="recommendList"></home-recommend>
     <home-like :list="likeList"></home-like>
     <home-weekend :list="weekendList"></home-weekend>
+    <home-tips></home-tips>
   </div>
 </template>
 
 <script>
 
+import axios from 'axios'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeLike from './components/Like'
 import HomeWeekend from './components/Weekend'
-import axios from 'axios'
+import HomeTips from './components/Tips'
 
 export default {
   name: 'Home',
@@ -58,7 +60,8 @@ export default {
     HomeIcons,
     HomeRecommend,
     HomeLike,
-    HomeWeekend
+    HomeWeekend,
+    HomeTips
   },
   mounted () {
     this.getHomeInfo()
