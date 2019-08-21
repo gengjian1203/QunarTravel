@@ -9,13 +9,14 @@ The following is a preview of the project:
 ![Result](readme/result.png "show")
 
 ## Including skills
-* vue-router  
-* components  
+* vue-cli  
+* vue-router
 * fastclick  
 * iconfont  
 * stylus  
-* axios
-* better-scroll
+* axios  
+* better-scroll  
+* vuex  
 
 ## Build Setup
 

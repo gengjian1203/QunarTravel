@@ -14,6 +14,8 @@ import 'style/iconfont.css'
 // 引用地方插件VueAwesomeSwiper，展现轮播广告组件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+// 引入Vuex
+import store from './store'
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
@@ -23,6 +25,7 @@ Vue.use(VueAwesomeSwiper/*, { default global options } */)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

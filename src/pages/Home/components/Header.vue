@@ -8,7 +8,7 @@
       输入城市/景点/游玩主题</div>
     <router-link to="/city">
       <div class="home-right">
-        {{city}}
+        {{this.nowcity}}
         <span class="iconfont icon-arrow">&#xe636;</span>
       </div>
     </router-link>
@@ -17,10 +17,12 @@
 
 <script>
 
+import { mapState } from 'vuex'
+
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['nowcity'])
   }
 }
 

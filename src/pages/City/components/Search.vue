@@ -17,8 +17,10 @@
       <ul class="search-content">
         <li class="search-item border-bottom"
             v-for="(item, index) of listResult"
-            :key="index">
-            {{item}}
+            :key="index"
+            @click="HandleCityClick(item)"
+        >
+          {{item}}
         </li>
         <li class="search-item border-bottom" v-show="bShowMatch">
           没有找到符合要求的地名
@@ -31,6 +33,7 @@
 <script>
 
 import BScroll from 'better-scroll'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'CitySearch',
@@ -51,11 +54,16 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['ChangNowCity']),
     HandleAddrInClick (el) {
       this.bActive = true
     },
     HandleAddrOutClick (el) {
       this.bActive = false
+    },
+    HandleCityClick (city) {
+      this.ChangNowCity(city)
+      this.$router.push('/')
     }
   },
   watch: {
