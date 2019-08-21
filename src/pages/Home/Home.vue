@@ -20,11 +20,13 @@ import HomeRecommend from './components/Recommend'
 import HomeLike from './components/Like'
 import HomeWeekend from './components/Weekend'
 import HomeTips from './components/Tips'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
   data () {
     return {
+      strHistoryCity: '',
       swiperList: [],
       iconsList: [],
       likeList: [],
@@ -32,13 +34,16 @@ export default {
       weekendList: []
     }
   },
+  computed: {
+    ...mapState(['nowcity'])
+  },
   methods: {
     getHomeInfo () {
       // 本地数据
-      axios.get('/api/home.json').then(this.getHomeInfoSucc).catch(() => {
+      axios.get('/api/home.json?nowcity=' + this.nowcity).then(this.getHomeInfoSucc).catch(() => {
         console.log('本地home.json数据未找到，索引github远程数据')
         // 远程github数据
-        axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/home.json').then(this.getHomeInfoSucc).catch(() => {
+        axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/home.json?nowcity=' + this.nowcity).then(this.getHomeInfoSucc).catch(() => {
           console.log('github远程home.json数据未找到')
         })
       })
@@ -64,9 +69,15 @@ export default {
     HomeTips
   },
   mounted () {
+    this.strHistoryCity = this.nowcity
     this.getHomeInfo()
+  },
+  activated () {
+    if (this.strHistoryCity !== this.nowcity) {
+      this.strHistoryCity = this.nowcity
+      this.getHomeInfo()
+    }
   }
-
 }
 </script>
 

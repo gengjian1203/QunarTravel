@@ -1,7 +1,7 @@
 <template>
   <div class="list" ref="scroll">
     <div>
-      <div class="area">
+      <div class="area" :ref="mySite">
         <div class="title border-topbottom">您的位置</div>
         <ul class="button-list">
           <li class="button actived"
@@ -50,6 +50,11 @@ export default {
     cities: Object,
     letter: String
   },
+  data () {
+    return {
+      mySite: 'mySite'
+    }
+  },
   computed: {
     ...mapState(['nowcity'])
   },
@@ -70,6 +75,9 @@ export default {
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.scroll)
+  },
+  activated () {
+    this.scroll.scrollToElement(this.$refs[this.mySite])
   }
 }
 

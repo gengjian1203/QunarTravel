@@ -17,6 +17,7 @@ The following is a preview of the project:
 * axios  
 * better-scroll  
 * vuex  
+* keep-alive
 
 ## Build Setup
 

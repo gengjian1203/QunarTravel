@@ -90,6 +90,9 @@ export default {
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.scroll)
+  },
+  activated () {
+    this.strSearch = ''
   }
 }
 
