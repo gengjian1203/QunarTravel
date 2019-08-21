@@ -12,7 +12,12 @@
       </div>
     </div>
     <ul class="content">
-      <li class="item" v-for="item of list" :key="item.id">
+      <router-link tag="li"
+                   class="item"
+                   v-for="item of list"
+                   :key="item.id"
+                   :to="'/detail/' + item.id"
+      >
         <img class="item-img" :src="item.imgUrl" :alt="item.desc">
         <p class="item-name">{{item.desc}}</p>
         <p class="item-price">
@@ -20,7 +25,7 @@
           <span class="item-price-num">{{item.price}}</span>
           起
         </p>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
