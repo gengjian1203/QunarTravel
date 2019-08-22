@@ -1,15 +1,9 @@
 <template>
   <div class="gallery-wrapper" @click="HandleGalleryClick">
-    <swiper class="gallert-content" :options="swiperOption">
+    <swiper class="gallert-content" :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide class="gallery-img">
-        <img class="image" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_r_800x800_6edd8174.jpg" alt="故宫">
-      </swiper-slide>
-      <swiper-slide class="gallery-img">
-        <img class="image" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_r_800x800_6edd8174.jpg" alt="故宫">
-      </swiper-slide>
-      <swiper-slide class="gallery-img">
-        <img class="image" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_r_800x800_6edd8174.jpg" alt="故宫">
+      <swiper-slide class="gallery-img" v-for="(item, index) of gallaryImgs" :key="index">
+        <img class="image" :src="item" :alt="'image_' + index">
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
@@ -21,6 +15,9 @@
 
 export default {
   name: 'CommonGallery',
+  props: {
+    gallaryImgs: Array
+  },
   data () {
     return {
       swiperOption: {
@@ -31,10 +28,18 @@ export default {
       }
     }
   },
+  computed: {
+    swiper () {
+      return this.$refs.mySwiper.swiper
+    }
+  },
   methods: {
     HandleGalleryClick () {
       this.$emit('close')
     }
+  },
+  mounted () {
+    this.swiper.slideTo(0)
   }
 }
 

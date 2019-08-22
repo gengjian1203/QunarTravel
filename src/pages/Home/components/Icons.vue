@@ -1,6 +1,6 @@
 <template>
 
-  <swiper :options="swiperOption" class="wrap">
+  <swiper :options="swiperOption" class="wrap" ref="mySwiper">
     <!-- slides -->
     <swiper-slide class="icons" v-for="(page, index) of pages" :key="index">
       <div class="icon" v-for="item of page" :key="item.id">
@@ -41,7 +41,13 @@ export default {
         pages[page].push(item)
       })
       return pages
+    },
+    swiper () {
+      return this.$refs.mySwiper.swiper
     }
+  },
+  activated () {
+    this.swiper.slideTo(0)
   }
 }
 

@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     HandleScroll () {
-      console.log('ssssss')
       let top = document.documentElement.scrollTop ||
                 document.body.scrollTop ||
                 window.pageYOfset

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" v-if="bShowList">
+    <swiper :options="swiperOption" v-if="bShow">
       <!-- slides -->
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" alt="去哪儿门票" />
@@ -32,7 +32,7 @@ export default {
     }
   },
   computed: {
-    bShowList () {
+    bShow () {
       return this.list.length
     }
   }

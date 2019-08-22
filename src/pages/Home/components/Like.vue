@@ -6,7 +6,13 @@
       猜你喜欢
     </div>
     <ul class="content">
-      <li class="item border-bottom" v-for="item of list" :key="item.id">
+      <router-link
+        tag="li"
+        class="item border-bottom"
+        v-for="item of list"
+        :key="item.id"
+        :to="'/detail/' + item.id"
+      >
         <img class="item-img" :src="item.imgUrl" :alt="item.desc">
         <div class="introduction">
           <div class="introduction-name">{{item.desc}}</div>
@@ -22,7 +28,7 @@
           <div class="introduction-address">{{item.address}}</div>
           <div class="introduction-footnote" v-if="bFootnote(item.footnote)">{{item.footnote}}</div>
         </div>
-      </li>
+      </router-link>
     </ul>
     <div class="foot border-top">
       查看所有产品
