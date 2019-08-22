@@ -35,6 +35,7 @@ export default {
   },
   methods: {
     HandleScroll () {
+      console.log('ssssss')
       let top = document.documentElement.scrollTop ||
                 document.body.scrollTop ||
                 window.pageYOfset
@@ -48,8 +49,11 @@ export default {
       }
     }
   },
-  created () {
+  activated () {
     window.addEventListener('scroll', this.HandleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.HandleScroll)
   }
 }
 
