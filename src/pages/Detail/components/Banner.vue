@@ -1,28 +1,49 @@
 <template>
-  <div class="banner-wrap">
-    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="故宫">
-    <div class="banner-info">
-      <div class="banner-name">故宫(AAAAA景区)</div>
-      <div class="banner-num">
-        <span class="iconfont banner-photo">&#xe67b;</span>
-        11
+  <div>
+    <div class="banner-wrap" @click="HandleBannerClick">
+      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="故宫">
+      <div class="banner-info">
+        <div class="banner-name">故宫(AAAAA景区)</div>
+        <div class="banner-num">
+          <span class="iconfont banner-photo">&#xe67b;</span>
+          11
+        </div>
       </div>
     </div>
+    <common-gallery v-show="bShowGallery" @close="HandleGalleryClose"></common-gallery>
   </div>
 </template>
 
 <script>
 
+import CommonGallery from 'common/Gallery/Gallery'
+
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  data () {
+    return {
+      bShowGallery: false
+    }
+  },
+  components: {
+    CommonGallery
+  },
+  methods: {
+    HandleBannerClick () {
+      this.bShowGallery = true
+    },
+    HandleGalleryClose () {
+      this.bShowGallery = false
+    }
+  }
 }
 
 </script>
 
 <style lang="stylus" scoped>
   .banner-wrap
-    position: relative
     overflow: hidden
+    position: relative
     width: 100%
     height: 0
     padding-bottom: 55%
