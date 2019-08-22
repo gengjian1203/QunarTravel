@@ -46,6 +46,7 @@ export default {
 
   .gallery-wrapper
     display: flex
+    z-index: 99
     flex-direction: column
     justify-content: center
     position: fixed

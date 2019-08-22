@@ -35,7 +35,9 @@ export default {
   },
   methods: {
     HandleScroll () {
-      let top = document.documentElement.scrollTop
+      let top = document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                window.pageYOfset
       if (top > 0) {
         this.bShowTitle = true
         let opacity = top / 200
@@ -46,7 +48,7 @@ export default {
       }
     }
   },
-  activated () {
+  created () {
     window.addEventListener('scroll', this.HandleScroll)
   }
 }
