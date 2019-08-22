@@ -74,7 +74,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.scroll)
+    this.scroll = new BScroll(this.$refs.scroll, {click: true, tap: true})
   },
   activated () {
     this.scroll.scrollToElement(this.$refs[this.mySite])
