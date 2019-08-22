@@ -89,11 +89,7 @@ export default {
     }
   },
   mounted () {
-<<<<<<< HEAD
-    this.scroll = new BScroll(this.$refs.scroll, {click: true})
-=======
     this.scroll = new BScroll(this.$refs.scroll, {click: true, tap: true})
->>>>>>> origin/detail-banner
   },
   activated () {
     this.strSearch = ''
