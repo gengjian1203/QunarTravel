@@ -2,7 +2,8 @@
   <div>
     <detail-header
       :sightName="sightName"
-    ></detail-header>
+    >
+    </detail-header>
     <detail-banner
       :sightName="sightName"
       :bannerImg="bannerImg"
@@ -12,6 +13,7 @@
     <detail-list-header></detail-list-header>
     <detail-list-tip></detail-list-tip>
     <detail-list :categoryList="categoryList" :bIcon="true"></detail-list>
+    <detail-talk></detail-talk>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import DetailHeader from './components/Header'
 import DetailListHeader from './components/ListHeader'
 import DetailListTip from './components/ListTip'
 import DetailList from './components/List'
+import DetailTalk from './components/Talk'
 import axios from 'axios'
 
 export default {
@@ -39,7 +42,8 @@ export default {
     DetailHeader,
     DetailListHeader,
     DetailListTip,
-    DetailList
+    DetailList,
+    DetailTalk
   },
   methods: {
     getDetailInfo () {

@@ -50,7 +50,7 @@ export default {
     strStar () {
       return function (rate) {
         const star = '★★★★★☆☆☆☆☆'
-        const nRate = parseInt(rate)
+        const nRate = Math.floor(parseFloat(rate))
         return star.slice(5 - nRate, 10 - nRate)
       }
     },

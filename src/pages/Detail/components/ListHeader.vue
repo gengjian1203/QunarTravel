@@ -4,8 +4,8 @@
       <div class="listheader-up-child border-right">
         <span class="iconfont icon-up-enter">&#xe602;</span>
         <p>
-          <span class="txt-score">{{this.nowStar}}</span>
-          <span class="txt-level">分&nbsp;&nbsp;&nbsp;&nbsp;超赞</span>
+          <span class="txt-score">{{this.star}}</span>
+          <span class="txt-level">分&nbsp;&nbsp;&nbsp;&nbsp;{{this.level}}</span>
         </p>
         <p class="txt-child">{{this.nowComment}}条评论&nbsp;&nbsp;{{this.nowStrategy}}条攻略</p>
       </div>
@@ -35,7 +35,13 @@ export default {
       'nowComment',
       'nowStarLevel',
       'nowStrategy'
-    ])
+    ]),
+    star () {
+      return parseFloat(this.nowStar).toFixed(1)
+    },
+    level () {
+      return this.nowStarLevel[Math.floor(this.star)]
+    }
   }
 }
 
@@ -56,7 +62,7 @@ export default {
     box-sizing: border-box
     position: relative
     width: 100%
-    height: 1.8rem
+    height: 2rem
     top: -.1rem
     border-radius: .1rem .1rem 0 0
     padding: .1rem .2rem 0 .2rem
