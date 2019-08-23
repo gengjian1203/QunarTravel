@@ -4,7 +4,7 @@
         :key="key"
         :ref="key"
         @click="HandleLetterClick"
-        @touchstart="HandleTouchStart"
+        @touchstart.prevent="HandleTouchStart"
         @touchmove="HandleTouchMove"
         @touchend="HandleTouchEnd"
     >
