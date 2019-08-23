@@ -7,9 +7,7 @@
     >
     </detail-banner>
     <detail-header></detail-header>
-    <div class="content">
-      <detail-list :categoryList="categoryList" :bIcon="true"></detail-list>
-    </div>
+    <detail-list :categoryList="categoryList" :bIcon="true"></detail-list>
   </div>
 </template>
 
