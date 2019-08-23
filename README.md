@@ -8,10 +8,12 @@ You can [click](https://gengjian1203.github.io/QunarTravel/dist) on this locatio
   
 The following is a preview of the project:  
 <figure class="third">
-    <img src="readme/result_1.png" alt="home" width="200">
-    <img src="readme/result_2.png" alt="city" width="200">
-    <img src="#" alt="detail" width="200">
+    <img style="float: left; margin: 5px;" src="readme/result_1.png" alt="home" width="200">
+    <img style="float: left; margin: 5px;" src="readme/result_2.png" alt="city" width="200">
+    <img style="float: left; margin: 5px;" src="readme/result_3.png" alt="detail" width="200">
 </figure>
+<div style="clear: both">
+</div>
 
 ## Including Skills
 * Vue  
