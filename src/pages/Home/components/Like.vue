@@ -12,6 +12,7 @@
         v-for="item of list"
         :key="item.id"
         :to="'/detail/' + item.id"
+        @click.native="HandleItemClick(item)"
       >
         <img class="item-img" :src="item.imgUrl" :alt="item.desc">
         <div class="introduction">
@@ -38,6 +39,8 @@
 
 <script>
 
+import { mapActions } from 'vuex'
+
 export default {
   name: 'HomeLike',
   props: {
@@ -55,6 +58,14 @@ export default {
       return function (strFootnote) {
         return (strFootnote !== '')
       }
+    }
+  },
+  methods: {
+    ...mapActions(['ChangNowStar', 'ChangNowComment', 'ChangNowStrategy']),
+    HandleItemClick (item) {
+      this.ChangNowStar(item.star)
+      this.ChangNowComment(item.comment)
+      this.ChangNowStrategy(item.strategy)
     }
   }
 }

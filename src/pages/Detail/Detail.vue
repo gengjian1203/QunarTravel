@@ -7,6 +7,7 @@
     >
     </detail-banner>
     <detail-header></detail-header>
+    <detail-list-header></detail-list-header>
     <detail-list :categoryList="categoryList" :bIcon="true"></detail-list>
   </div>
 </template>
@@ -15,6 +16,7 @@
 
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
+import DetailListHeader from './components/ListHeader'
 import DetailList from './components/List'
 import axios from 'axios'
 
@@ -31,6 +33,7 @@ export default {
   components: {
     DetailBanner,
     DetailHeader,
+    DetailListHeader,
     DetailList
   },
   methods: {

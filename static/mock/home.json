@@ -130,6 +130,7 @@
         "desc": "故宫",
         "star": "5",
         "comment": "451040",
+        "strategy": "123",
         "price": "60",
         "address": "东城区",
         "footnote": "世界五大宫之首，穿越与您近在咫尺"
@@ -139,6 +140,7 @@
         "desc": "故宫",
         "star": "4",
         "comment": "222222",
+        "strategy": "31",
         "price": "60",
         "address": "东城区",
         "footnote": ""
@@ -148,6 +150,7 @@
         "desc": "故宫",
         "star": "3",
         "comment": "333333",
+        "strategy": "47",
         "price": "60",
         "address": "东城区",
         "footnote": "世界五大宫之首，穿越与您近在咫尺"
@@ -157,6 +160,7 @@
         "desc": "故宫",
         "star": "2",
         "comment": "4",
+        "strategy": "12",
         "price": "60",
         "address": "东城区",
         "footnote": ""
@@ -166,6 +170,7 @@
         "desc": "故宫",
         "star": "1",
         "comment": "12345",
+        "strategy": "3",
         "price": "60",
         "address": "东城区",
         "footnote": "世界五大宫之首，穿越与您近在咫尺"
@@ -175,6 +180,7 @@
         "desc": "故宫",
         "star": "3",
         "comment": "451040",
+        "strategy": "12",
         "price": "60",
         "address": "东城区",
         "footnote": "世界五大宫之首，穿越与您近在咫尺"
