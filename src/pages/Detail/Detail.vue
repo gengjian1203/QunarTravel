@@ -1,13 +1,16 @@
 <template>
   <div>
+    <detail-header
+      :sightName="sightName"
+    ></detail-header>
     <detail-banner
       :sightName="sightName"
       :bannerImg="bannerImg"
       :gallaryImgs="gallaryImgs"
     >
     </detail-banner>
-    <detail-header></detail-header>
     <detail-list-header></detail-list-header>
+    <detail-list-tip></detail-list-tip>
     <detail-list :categoryList="categoryList" :bIcon="true"></detail-list>
   </div>
 </template>
@@ -17,6 +20,7 @@
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
 import DetailListHeader from './components/ListHeader'
+import DetailListTip from './components/ListTip'
 import DetailList from './components/List'
 import axios from 'axios'
 
@@ -34,6 +38,7 @@ export default {
     DetailBanner,
     DetailHeader,
     DetailListHeader,
+    DetailListTip,
     DetailList
   },
   methods: {

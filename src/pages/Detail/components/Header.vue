@@ -16,7 +16,7 @@
       >
         &#xe696;
       </router-link>
-      <div class="header-fixed-title">景区名称</div>
+      <div class="header-fixed-title">{{this.sightName}}</div>
     </div>
   </div>
 </template>
@@ -25,6 +25,9 @@
 
 export default {
   name: 'DetailHeader',
+  props: {
+    sightName: String
+  },
   data () {
     return {
       bShowTitle: false,
@@ -40,7 +43,7 @@ export default {
                 window.pageYOfset
       if (top > 0) {
         this.bShowTitle = true
-        let opacity = top / 200
+        let opacity = top / 100
         opacity = opacity > 1 ? 1 : opacity
         this.opacityStyle = { opacity }
       } else {
@@ -74,6 +77,7 @@ export default {
 
   .header-wrapper
     position: absolute
+    z-index: 98
     height: .88rem
     top: 0
     left: 0

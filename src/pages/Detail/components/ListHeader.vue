@@ -4,8 +4,8 @@
       <div class="listheader-up-child border-right">
         <span class="iconfont icon-up-enter">&#xe602;</span>
         <p>
-          <span class="txt-score">{{this.star}}</span>
-          <span class="txt-level">分&nbsp;&nbsp;&nbsp;&nbsp;{{this.level}}</span>
+          <span class="txt-score">{{this.nowStar}}</span>
+          <span class="txt-level">分&nbsp;&nbsp;&nbsp;&nbsp;超赞</span>
         </p>
         <p class="txt-child">{{this.nowComment}}条评论&nbsp;&nbsp;{{this.nowStrategy}}条攻略</p>
       </div>
@@ -35,13 +35,7 @@ export default {
       'nowComment',
       'nowStarLevel',
       'nowStrategy'
-    ]),
-    star () {
-      return parseFloat(this.nowStar).toFixed(1)
-    },
-    level () {
-      return this.nowStarLevel[Math.floor(this.star)]
-    }
+    ])
   }
 }
 

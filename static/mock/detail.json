@@ -13,21 +13,41 @@
                     "https://img1.qunarzz.com/sight/p0/1410/e3/73da8d3e19cdc41c1932d4fcd22ec792.water.jpg_r_800x800_7f96ccf9.jpg"
                   ],
     "categoryList": [{
-        "title": "成人票",
-        "children": [{
-          "title": "成人三馆联票",
-          "children": [{
-            "title": "成人三馆联票 - 某一连锁店销售"
-          }]
-        },{
-          "title": "成人五馆联票"
-        }]
+      "title": "预售成人票",
+      "children" : [{
+        "title": "上午票（成人）",
+        "price": "60"
       }, {
-        "title": "学生票"
-      }, {
-        "title": "儿童票"
-      }, {
-        "title": "特惠票"
+        "title": "下午票（成人）",
+        "price": "60"
       }]
+    }, {
+      "title": "预售学生票",
+      "children": [{
+        "title": "上午票（学生）",
+        "price": "30"
+      }, {
+        "title": "下午票（学生）",
+        "price": "30"
+      }]
+    }, {
+      "title": "预售儿童票",
+      "children": [{
+        "title": "上午票（儿童）",
+        "price": "30"
+      }, {
+        "title": "下午票（儿童）",
+        "price": "30"
+      }]
+    }, {
+      "title": "预售特惠票",
+      "children": [{
+        "title": "上午票（特惠）",
+        "price": "50"
+      }, {
+        "title": "下午票（特惠）",
+        "price": "40"
+      }]
+    }]
   }
 }
