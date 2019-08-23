@@ -1,24 +1,76 @@
 # QunarTravel
+[中文](README_CN.md) / English
 
-This is a project that uses Vue framework to imitate the core page of Qunar App.  
-这是一个使用Vue框架模拟去哪儿网App核心页面的项目。  
+This is a demo that uses the Vue framework to simulate Qunar App.  
 
-## Show
-You can [click](https://gengjian1203.github.io/QunarTravel/dist) on this location to view the project online.  
+## Demo
+You can [click](https://gengjian1203.github.io/QunarTravel/dist) on this location to view the demo online.  
+  
 The following is a preview of the project:  
-![Result](readme/result.png "show")
+<figure class="third">
+    <img src="readme/result_1.png" alt="home" width="200">
+    <img src="readme/result_2.png" alt="city" width="200">
+    <img src="#" alt="detail" width="200">
+</figure>
 
-## Including skills
-* vue-cli  
-* vue-router
-* fastclick  
-* iconfont  
-* stylus  
+## Including Skills
+* Vue  
+Vue.js is a progressive framework based on MVVM.  
+The design adopts bottom-up incremental development.  
+It has a perfect ecosystem.  
+  
+* Vue CLI  
+It is a scaffolding tool provided by Vue.js for rapid construction projects.  
+  
+* Vue Router  
+Vue Router is the official Vue.js routing manager.  
+  
+* Vuex  
+Vuex is a state management model developed specifically for Vue.js applications.  
+It uses centralized storage to manage the state of all components of an application.  
+The corresponding rules ensure that the state changes in a predictable way.  
+  
 * axios  
+HTTP client for browser and node.js based on promise.  
+  
+* iconfont  
+Vector icon library with powerful functions and rich icon contents in China.  
+Vector icon download, online storage, format conversion and other functions can be provided.  
+  
+* stylus  
+A pre-processing framework for CSS.  
+  
 * better-scroll  
-* vuex  
-* keep-alive
-
+Better-scroll is a plug-in that focuses on the needs of various rolling scenarios on the mobile side (which already supports PC).  
+It is based on native JS and does not depend on any framework. It is a very lightweight JS lib.  
+  
+* vue-awesome-swiper  
+Based on Swiper 4, the Roadcasting Component for Vue supports server rendering and single page application.  
+  
+* keep-alive  
+Keep-alive is an abstract component provided by Vue, which is used to cache components to save performance.  
+  
+* ESLink  
+ESLint is a tool for identifying and reporting pattern matching in ECMAScript/JavaScript code.  
+Its goal is to ensure code consistency and avoid errors.  
+  
+### Config Environment
+* Hardware  
+MacBook Pro  
+* Soft  
+MacOS (10.14.2)    
+Sublime Text (Build 3132)  
+Google Chrome (75.0.3770.100)  
+Firefox (67.0.4)  
+node (v10.15.3)  
+npm (6.4.1)  
+vue (2.5.2)  
+vue-awesome-swiper (2.6.7)  
+vue-router (3.0.1)  
+vuex (3.1.1)  
+axios (0.19.0)  
+stylus (0.54.5)  
+  
 ## Build Setup
 
 ``` bash
