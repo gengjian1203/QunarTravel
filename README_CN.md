@@ -1,5 +1,5 @@
 # QunarTravel
-中文 / [English](README.md)
+[English](README.md) / 中文
 
 这是一个使用Vue框架模拟去哪儿网App的项目展示。  
 
@@ -8,12 +8,8 @@
   
 以下是项目的预览：  
 <figure class="third">
-    <img style="float: left; margin: 5px;" src="readme/result_1.png" alt="首页" width="200">
-    <img style="float: left; margin: 5px;" src="readme/result_2.png" alt="城市选择" width="200">
-    <img style="float: left; margin: 5px;" src="readme/result_3.png" alt="景点详情" width="200">
+    <img src="readme/result_1.png" alt="首页" width="200"><img src="readme/result_2.png" alt="城市选择" width="200"><img src="readme/result_3.png" alt="景点详情" width="200">
 </figure>
-<div style="clear: both">
-</div>
 
 ## 项目用到的技术
 * Vue  
