@@ -3,12 +3,18 @@
   <swiper :options="swiperOption" class="wrap" ref="mySwiper">
     <!-- slides -->
     <swiper-slide class="icons" v-for="(page, index) of pages" :key="index">
-      <div class="icon" v-for="item of page" :key="item.id">
+      <router-link
+        tag="div"
+        class="icon"
+        v-for="item of page"
+        :key="item.id"
+        :to="'/detail/' + item.id"
+      >
         <div class="icon-img">
           <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc">
         </div>
         <p class="icon-desc">{{item.desc}}</p>
-      </div>
+      </router-link>
     </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>

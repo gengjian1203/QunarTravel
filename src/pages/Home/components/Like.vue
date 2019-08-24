@@ -145,7 +145,7 @@ export default {
             margin-right: .5rem
             ellipsis()
           .introduction-footnote
-            width: 88%
+            width: 82%
             color: red
             font-size: .24rem
             margin-top: .5rem

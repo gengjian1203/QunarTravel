@@ -13,7 +13,7 @@
     <detail-list-header></detail-list-header>
     <detail-list-tip></detail-list-tip>
     <detail-list :categoryList="categoryList" :bIcon="true"></detail-list>
-    <detail-talk></detail-talk>
+    <detail-talk :talk="talk"></detail-talk>
   </div>
 </template>
 
@@ -34,7 +34,8 @@ export default {
       sightName: '',
       bannerImg: '',
       gallaryImgs: [],
-      categoryList: []
+      categoryList: [],
+      talk: []
     }
   },
   components: {
@@ -71,6 +72,7 @@ export default {
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
         this.categoryList = data.categoryList
+        this.talk = data.talk
       }
     }
   },

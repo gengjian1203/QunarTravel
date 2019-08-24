@@ -4,16 +4,34 @@
     <div class="talk-title border-bottom">
       用户评论
     </div>
-    <div class="talk-content border-bottom">
-      参观故宫是来京必须要安排的行程，紫禁城的宏伟和惊艳超乎你想象，假装自己穿越时空，你走在乾隆皇帝走过的石板砖上，体验当年盛世的文化底蕴和奢华的生活～ 攻略1 提前网上购买门票，凭身份证直接进 攻略2 租讲解器，每个讲解器都是感应的，每个只讲解一遍，只有一个耳机，别想着两人共用的好事儿，哈哈哈 攻略3 周一闭馆，周末人居多，尽量安排工作日，若所有宫殿都想参观，就提早进去，不过我个人觉得没必要，参观代表性的中轴和个别妃子和慈禧的宫殿即可，建议预留至少大半天时间在里头 再来北京，还愿意去故宫~~
-    </div>
+    <ul v-for="(item, index) of talk" :key="index">
+      <li class="talk-item border-bottom">
+        <div class="item-head">
+          <div class="item-head-left">{{getStar(item.star)}}</div>
+          <div class="item-head-right">{{item.author + " " + item.date}}</div>
+        </div>
+        <div class="item-body">
+          {{item.content}}
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'DetailTalk'
+  name: 'DetailTalk',
+  props: {
+    talk: Array
+  },
+  methods: {
+    getStar (rate) {
+      const str = '★★★★★☆☆☆☆☆'
+      const n = Math.floor(parseFloat(rate))
+      return str.slice(5 - n, 10 - n)
+    }
+  }
 }
 
 </script>
@@ -39,11 +57,24 @@ export default {
       width: .06rem
       height: .25rem
       background: $BGColor
-  .talk-content
+  .talk-item
     width: 100%
     box-sizing: border-box
     font-size: .25rem
     color: #616161
     line-height: .42rem
     padding: .1rem .2rem .3rem .2rem
+    .item-head
+      width: 100%
+      font-size: .24rem
+      padding: .1rem 0
+      .item-head-left
+        float: left
+        color: #ffb436
+      .item-head-right
+        float: right
+        color: #000000
+    .item-body
+      clear: both
+      padding: .1rem 0
 </style>

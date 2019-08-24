@@ -45,6 +45,7 @@ export default {
   @import '~style/mixins.styl'
 
   .wrap
+    width: 100%
     .top
       width: 100%
       height: .20rem
@@ -65,25 +66,28 @@ export default {
         float: right
         line-height: .9rem
     .content
+      overflow: hidden
+      box-sizing: border-box
+      width: 100%
       overflow-x: scroll
       overflow-y: hidden
       white-space: nowrap
-      width: calc(100% - .48rem)
       padding: 0 .24rem
       .item
+        box-sizing: border-box
         display: inline-block
         overflow: hidden
         width: 28.5%
         height: 0
         padding-right: .1rem
-        padding-bottom: 40.5%
+        padding-bottom: 40%
         .item-img
           overflow: hidden
           width: 100%
         .item-name
           text-align: center
           font-size: .24rem
-          margin-top: .16rem
+          margin-top: 6%
           margin-bottom: .08rem
           ellipsis()
         .item-price

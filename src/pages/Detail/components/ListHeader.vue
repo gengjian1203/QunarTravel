@@ -62,20 +62,20 @@ export default {
     box-sizing: border-box
     position: relative
     width: 100%
-    height: 2rem
+    padding-bottom: 30%
     top: -.1rem
     border-radius: .1rem .1rem 0 0
     padding: .1rem .2rem 0 .2rem
     background: #ffffff
     .listheader-up
       width: 100%
-      height: 1.12rem
+      padding-bottom: 15%
       .listheader-up-child
         position: relative
         float: left
         box-sizing: border-box
         width: 50%
-        padding: .2rem
+        padding: 2%
         .txt-score
           line-height: .25rem
           font-size: .46rem

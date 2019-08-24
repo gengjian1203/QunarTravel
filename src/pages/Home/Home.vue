@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconsList"></home-icons>

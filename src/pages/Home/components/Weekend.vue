@@ -2,11 +2,17 @@
   <div class="wrap">
     <div class="title">周末去哪儿</div>
     <ul class="content">
-      <li class="item" v-for="item of list" :key="item.id">
+      <router-link
+        tag="li"
+        class="item"
+        v-for="item of list"
+        :key="item.id"
+        :to="'/detail/' + item.id"
+      >
         <img class="item-img" :src="item.imgUrl" :alt="item.desc">
         <div class="name">{{item.desc}}</div>
         <div class="introduction">{{item.introduction}}</div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
