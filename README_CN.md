@@ -7,10 +7,8 @@
 您可以在此位置[单击](https://gengjian1203.github.io/qunartravel/dist)在线查看项目。  
   
 以下是项目的预览：  
-<figure class="third">
-    <img src="readme/result_1.png" alt="首页" width="200"><img src="readme/result_2.png" alt="城市选择" width="200"><img src="readme/result_3.png" alt="景点详情" width="200">
-</figure>
-
+![Result](readme/result.jpg "Result")  
+  
 ## 项目用到的技术
 * Vue  
 Vue.js 是一套基于MVVM的渐进式框架。  

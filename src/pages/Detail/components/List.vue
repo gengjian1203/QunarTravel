@@ -49,7 +49,7 @@ export default {
           width: .36rem
           height: .36rem
           top: .05rem
-          background: url(http://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat
+          background: url(https://s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat
           background-size: .4rem 3rem
         .list-price
           float: right
