@@ -4,7 +4,7 @@
 这是一个使用Vue框架模拟去哪儿网App的项目展示。  
 
 ## 展示
-您可以在此位置[单击](https://gengjian1203.github.io/qunartravel/dist)在线查看项目。  
+您可以在此位置[单击](https://gengjian1203.github.io/QunarTravel/dist)在线查看项目。  
   
 以下是项目的预览：  
 ![Result](readme/result.jpg "Result")  
