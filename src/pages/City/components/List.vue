@@ -60,7 +60,7 @@ export default {
   },
   watch: {
     letter () {
-      this.scroll.scrollToElement(this.$refs[this.letter][0], {click: true})
+      this.scroll.scrollToElement(this.$refs[this.letter][0], {click: true, tap: true})
     }
   },
   methods: {
@@ -78,6 +78,7 @@ export default {
   },
   activated () {
     this.scroll.scrollToElement(this.$refs[this.mySite])
+    this.scroll.refresh()
   }
 }
 
