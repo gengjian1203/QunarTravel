@@ -48,20 +48,21 @@ export default {
   },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json', {
+      // 本地数据
+      // axios.get('/api/detail.json', {
+      //   params: {
+      //     id: this.$route.params.id
+      //   }
+      // }).then(this.getDetailInfoSucc).catch(() => {
+      //   console.log('本地detail.json数据未找到，请求github远程数据')
+      // })
+      // 远程github数据
+      axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/detail.json', {
         params: {
           id: this.$route.params.id
         }
       }).then(this.getDetailInfoSucc).catch(() => {
-        console.log('本地detail.json数据未找到，请求github远程数据')
-        // 远程github数据
-        axios.get('https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/static/mock/detail.json', {
-          params: {
-            id: this.$route.params.id
-          }
-        }).then(this.getDetailInfoSucc).catch(() => {
-          console.log('github远程home.json数据未找到')
-        })
+        console.log('github远程home.json数据未找到')
       })
     },
     getDetailInfoSucc (r) {
