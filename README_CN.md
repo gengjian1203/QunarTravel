@@ -1,5 +1,5 @@
 # QunarTravel
-[English](README.md) / 中文
+[English](https://github.com/gengjian1203/QunarTravel/blob/master/README.md) / 中文
 
 这是一个使用Vue框架模拟去哪儿网App的项目展示。  
 
@@ -7,7 +7,7 @@
 您可以在此位置[单击](https://gengjian1203.github.io/QunarTravel/dist)在线查看项目。  
   
 以下是项目的预览：  
-![Result](readme/result.jpg "Result")  
+![Result](https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/readme/result.jpg "Result")  
   
 ## 项目用到的技术
 * Vue  

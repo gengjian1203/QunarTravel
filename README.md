@@ -1,5 +1,5 @@
 # QunarTravel
-English / [中文](README_CN.md)
+English / [中文](https://github.com/gengjian1203/QunarTravel/blob/master/README_CN.md)
 
 This is a demo that uses the Vue framework to simulate Qunar App.  
 
@@ -7,7 +7,7 @@ This is a demo that uses the Vue framework to simulate Qunar App.
 You can [click](https://gengjian1203.github.io/QunarTravel/dist) on this location to view the demo online.  
   
 The following is a preview of the project:  
-![Result](readme/result.jpg "Result")  
+![Result](https://raw.githubusercontent.com/gengjian1203/QunarTravel/master/readme/result.jpg "Result")  
   
 ## Including Skills
 * Vue  
